@@ -3,8 +3,6 @@
 This project demonstrates a modern data-analytics pipeline for **equity valuation** using
 **Snowflake** for warehousing, **dbt** for transformation and testing, and a small Python ingestion script for loading data.
 
-It mirrors how a buy-side or internal analytics team would structure a production-grade stack for valuation and portfolio analytics.
-
 ---
 
 ## 🚀 Overview
