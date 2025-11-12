@@ -174,24 +174,22 @@ dbt creates:
 
 ### 🧮 Example Results — FY2024, Prices as of Jan 31 2025
 
-| SYMBOL    |  PRICE | FISCAL_YEAR | REVENUE ($B) | EBITDA ($B) | NET_INCOME ($B) | FCF ($B) |        PE | EV/EBITDA |  EV/SALES |  FCF Yield |  Div Yield | Intrinsic Value (6% FCF Yield) | Upside vs Price |
-| :-------- | -----: | ----------: | -----------: | ----------: | --------------: | -------: | --------: | --------: | --------: | ---------: | ---------: | -----------------------------: | --------------: |
-| **AAPL**  | 236.00 |        2024 |        391.0 |       125.0 |            93.7 |    108.8 | **38.1×** | **28.1×** |  **9.0×** | **3.05 %** | **0.43 %** |                         119.96 |           −49 % |
-| **MSFT**  | 415.06 |        2024 |        245.1 |       127.0 |            88.4 |    76.96 | **34.9×** | **24.1×** | **12.5×** | **2.49 %** | **0.68 %** |                         172.57 |           −58 % |
-| **GOOGL** | 204.02 |        2024 |        350.0 |       130.0 |           100.1 |    72.76 | **25.1×** | **19.1×** |  **7.1×** | **2.90 %** | **0.29 %** |                          98.60 |           −52 % |
-| **META**  | 689.18 |        2024 |        164.5 |        75.0 |            62.4 |     52.1 | **28.0×** | **22.6×** | **10.3×** | **2.98 %** | **0.29 %** |                         342.67 |           −50 % |
+| SYMBOL    |  PRICE | FISCAL_YEAR | REVENUE ($B) | EBITDA ($B) | NET_INCOME ($B) | FCF ($B) |   **P/E** | **EV/EBITDA** | **EV/SALES** | **FCF Yield** | **Div Yield** | **Intrinsic Value (6 % FCF Yield)** | **Upside vs Price** |
+| :-------- | -----: | ----------: | -----------: | ----------: | --------------: | -------: | --------: | ------------: | -----------: | ------------: | ------------: | ----------------------------------: | ------------------: |
+| **AAPL**  | 236.00 |        2024 |        391.0 |       125.0 |            93.7 |    108.8 | **38.1×** |     **28.1×** |     **9.0×** |    **3.05 %** |    **0.43 %** |                              119.96 |               −49 % |
+| **MSFT**  | 415.06 |        2024 |        245.1 |       127.0 |            88.4 |    76.96 | **34.9×** |     **24.1×** |    **12.5×** |    **2.49 %** |    **0.68 %** |                              172.57 |               −58 % |
+| **GOOGL** | 204.02 |        2024 |        350.0 |       130.0 |           100.1 |    72.76 | **25.1×** |     **19.1×** |     **7.1×** |    **2.90 %** |    **0.29 %** |                               98.60 |               −52 % |
+| **META**  | 689.18 |        2024 |        164.5 |        75.0 |            62.4 |     52.1 | **28.0×** |     **22.6×** |    **10.3×** |    **2.98 %** |    **0.29 %** |                              342.67 |               −50 % |
+| **XOM**   | 110.55 |        2024 |        349.6 |        73.3 |            33.7 |    34.36 | **14.1×** |      **6.7×** |    **1.41×** |    **7.23 %** |    **3.51 %** |                              133.25 |           **+21 %** |
 
 ---
 
 ### 🧭 Interpretation
 
-Even with strong earnings, all four megacaps screen as **overvalued** under a conservative 6 % FCF-yield framework — implying roughly 50 % downside to “fair” value if investors demanded higher cash yields.
+This comparison highlights the **valuation gap between growth and value** names:
 
-Notes:
-
-* **High multiples (P/E 30–40×, EV/EBITDA 20–25×):** justified only if growth and margins stay exceptional.
-* **Low FCF yields (< 3 %):** the market prices these firms like long-duration growth assets, not cash cows.
-* **Intrinsic value vs price:** all trade well above the fair-value curve; this aligns with 2025’s high-multiple tech environment.
+* Tech mega-caps (AAPL, MSFT, GOOGL, META) trade at **30–40× earnings** and sub-3 % FCF yields, implying long-duration growth expectations.
+* **Exxon Mobil (XOM)**, in contrast, trades at **~14× P/E** and a **7 % FCF yield**, roughly aligned with or below its intrinsic value at a 6 % cost of capital — a textbook “value” profile.
 
 ---
 

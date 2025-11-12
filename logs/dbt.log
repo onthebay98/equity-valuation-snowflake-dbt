@@ -1537,3 +1537,518 @@ order by iv_fcf_yield_6pct_upside desc nulls last
 [0m20:33:06.703454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109455050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bc2650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087a6f20>]}
 [0m20:33:06.703706 [debug] [MainThread]: Flushing usage events
 [0m20:33:06.971149 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:11.204947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064281a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f7fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f7fb10>]}
+
+
+============================== 20:59:11.211066 | ca24477b-cf5e-4f9e-a890-3dd2318f9d88 ==============================
+[0m20:59:11.211066 [info ] [MainThread]: Running with dbt=1.11.0-b4
+[0m20:59:11.211396 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/logs', 'printer_width': '80', 'fail_fast': 'False', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'use_colors': 'True', 'write_json': 'True', 'profiles_dir': '/Users/bayhodge/.dbt', 'cache_selected_only': 'False', 'target_path': 'None', 'no_print': 'None', 'version_check': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'empty': 'False', 'quiet': 'False', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'warn_error': 'None'}
+[0m20:59:11.398824 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:59:11.399077 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:59:11.399227 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:59:11.483117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065c4e90>]}
+[0m20:59:11.511309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e47f00>]}
+[0m20:59:11.511835 [info ] [MainThread]: Registered adapter: snowflake=1.10.3
+[0m20:59:11.573245 [debug] [MainThread]: checksum: 57e51233fb2305050a86c940b93938a4d3a51a7b95f45f76840a20ffa12695aa, vars: {}, profile: , target: , version: 1.11.0b4
+[0m20:59:11.655410 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:59:11.655585 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:59:11.679259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111382250>]}
+[0m20:59:11.721888 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/manifest.json
+[0m20:59:11.725394 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/semantic_manifest.json
+[0m20:59:11.738728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ee2a80>]}
+[0m20:59:11.738929 [info ] [MainThread]: Found 3 models, 6 data tests, 2 sources, 494 macros
+[0m20:59:11.739085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111089010>]}
+[0m20:59:11.739962 [info ] [MainThread]: 
+[0m20:59:11.740126 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:59:11.740246 [info ] [MainThread]: 
+[0m20:59:11.740453 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:59:11.742468 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EQUITY_DB'
+[0m20:59:11.786946 [debug] [ThreadPool]: Using snowflake connection "list_EQUITY_DB"
+[0m20:59:11.787108 [debug] [ThreadPool]: On list_EQUITY_DB: show terse schemas in database EQUITY_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "connection_name": "list_EQUITY_DB"} */
+[0m20:59:11.787227 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:59:12.146623 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.359 seconds
+[0m20:59:12.151572 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_EQUITY_DB, now list_EQUITY_DB_ANALYTICS)
+[0m20:59:12.162020 [debug] [ThreadPool]: Using snowflake connection "list_EQUITY_DB_ANALYTICS"
+[0m20:59:12.162281 [debug] [ThreadPool]: On list_EQUITY_DB_ANALYTICS: show objects in EQUITY_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "connection_name": "list_EQUITY_DB_ANALYTICS"} */;
+[0m20:59:12.250206 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.088 seconds
+[0m20:59:12.260166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123a14a0>]}
+[0m20:59:12.263538 [debug] [Thread-1 (]: Began running node model.equity_valuation.stg_fundamentals
+[0m20:59:12.263795 [debug] [Thread-2 (]: Began running node model.equity_valuation.stg_prices
+[0m20:59:12.264111 [info ] [Thread-1 (]: 1 of 3 START sql view model ANALYTICS.stg_fundamentals ......................... [RUN]
+[0m20:59:12.264629 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_EQUITY_DB_ANALYTICS, now model.equity_valuation.stg_fundamentals)
+[0m20:59:12.264370 [info ] [Thread-2 (]: 2 of 3 START sql view model ANALYTICS.stg_prices ............................... [RUN]
+[0m20:59:12.264862 [debug] [Thread-1 (]: Began compiling node model.equity_valuation.stg_fundamentals
+[0m20:59:12.265078 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.equity_valuation.stg_prices'
+[0m20:59:12.269495 [debug] [Thread-1 (]: Writing injected SQL for node "model.equity_valuation.stg_fundamentals"
+[0m20:59:12.269742 [debug] [Thread-2 (]: Began compiling node model.equity_valuation.stg_prices
+[0m20:59:12.271600 [debug] [Thread-2 (]: Writing injected SQL for node "model.equity_valuation.stg_prices"
+[0m20:59:12.273959 [debug] [Thread-1 (]: Began executing node model.equity_valuation.stg_fundamentals
+[0m20:59:12.286897 [debug] [Thread-2 (]: Began executing node model.equity_valuation.stg_prices
+[0m20:59:12.297778 [debug] [Thread-2 (]: Writing runtime sql for node "model.equity_valuation.stg_prices"
+[0m20:59:12.298093 [debug] [Thread-1 (]: Writing runtime sql for node "model.equity_valuation.stg_fundamentals"
+[0m20:59:12.299854 [debug] [Thread-1 (]: Using snowflake connection "model.equity_valuation.stg_fundamentals"
+[0m20:59:12.300392 [debug] [Thread-2 (]: Using snowflake connection "model.equity_valuation.stg_prices"
+[0m20:59:12.301021 [debug] [Thread-1 (]: On model.equity_valuation.stg_fundamentals: create or replace   view EQUITY_DB.ANALYTICS.stg_fundamentals
+  
+  
+  
+  
+  as (
+    with base as (
+    select
+        upper(symbol) as symbol,
+        fiscal_year::int as fiscal_year,
+        revenue::float as revenue,
+        ebitda::float as ebitda,
+        net_income::float as net_income,
+        fcf::float as fcf,
+        total_debt::float as total_debt,
+        cash::float as cash,
+        shares_out::float as shares_out,
+        dividends::float as dividends
+    from EQUITY_DB.RAW.FUNDAMENTALS
+),
+latest as (
+    select
+        symbol,
+        max(fiscal_year) as latest_year
+    from base
+    group by symbol
+)
+
+select b.*
+from base b
+join latest l
+  on b.symbol = l.symbol
+ and b.fiscal_year = l.latest_year
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "model.equity_valuation.stg_fundamentals"} */;
+[0m20:59:12.301693 [debug] [Thread-2 (]: On model.equity_valuation.stg_prices: create or replace   view EQUITY_DB.ANALYTICS.stg_prices
+  
+  
+  
+  
+  as (
+    with base as (
+    select
+        upper(symbol) as symbol,
+        date::date as date,
+        close::float as close,
+        volume::float as volume
+    from EQUITY_DB.RAW.PRICES
+),
+latest as (
+    select
+        symbol,
+        max(date) as latest_date
+    from base
+    group by symbol
+)
+
+select
+    b.symbol,
+    b.date,
+    b.close,
+    b.volume,
+    case when b.date = l.latest_date then 1 else 0 end as is_latest
+from base b
+join latest l
+  on b.symbol = l.symbol
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "model.equity_valuation.stg_prices"} */;
+[0m20:59:12.302616 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:59:12.529080 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.227 seconds
+[0m20:59:12.559754 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129ac290>]}
+[0m20:59:12.560390 [info ] [Thread-1 (]: 1 of 3 OK created sql view model ANALYTICS.stg_fundamentals .................... [[32mSUCCESS 1[0m in 0.29s]
+[0m20:59:12.560867 [debug] [Thread-1 (]: Finished running node model.equity_valuation.stg_fundamentals
+[0m20:59:12.718786 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.416 seconds
+[0m20:59:12.723295 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115c1de0>]}
+[0m20:59:12.724291 [info ] [Thread-2 (]: 2 of 3 OK created sql view model ANALYTICS.stg_prices .......................... [[32mSUCCESS 1[0m in 0.46s]
+[0m20:59:12.725027 [debug] [Thread-2 (]: Finished running node model.equity_valuation.stg_prices
+[0m20:59:12.726116 [debug] [Thread-3 (]: Began running node model.equity_valuation.equity_valuations
+[0m20:59:12.727152 [info ] [Thread-3 (]: 3 of 3 START sql view model ANALYTICS.equity_valuations ........................ [RUN]
+[0m20:59:12.727969 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.equity_valuation.equity_valuations'
+[0m20:59:12.728410 [debug] [Thread-3 (]: Began compiling node model.equity_valuation.equity_valuations
+[0m20:59:12.733852 [debug] [Thread-3 (]: Writing injected SQL for node "model.equity_valuation.equity_valuations"
+[0m20:59:12.735346 [debug] [Thread-3 (]: Began executing node model.equity_valuation.equity_valuations
+[0m20:59:12.738628 [debug] [Thread-3 (]: Writing runtime sql for node "model.equity_valuation.equity_valuations"
+[0m20:59:12.741255 [debug] [Thread-3 (]: Using snowflake connection "model.equity_valuation.equity_valuations"
+[0m20:59:12.741699 [debug] [Thread-3 (]: On model.equity_valuation.equity_valuations: create or replace   view EQUITY_DB.ANALYTICS.equity_valuations
+  
+  
+  
+  
+  as (
+    with prices as (
+    select symbol, close as price
+    from EQUITY_DB.ANALYTICS.stg_prices
+    where is_latest = 1
+),
+f as (
+    select *
+    from EQUITY_DB.ANALYTICS.stg_fundamentals
+)
+
+select
+    p.symbol,
+    p.price,
+    f.fiscal_year,
+    f.revenue,
+    f.ebitda,
+    f.net_income,
+    f.fcf,
+    f.total_debt,
+    f.cash,
+    f.shares_out,
+    f.dividends,
+
+    /* Market cap & EV */
+    (p.price * f.shares_out) as market_cap,
+    (p.price * f.shares_out) + f.total_debt - f.cash as enterprise_value,
+
+    /* Multiples */
+    case when f.net_income > 0
+        then (p.price * f.shares_out) / f.net_income
+    end as pe,
+
+    case when f.ebitda > 0
+        then ((p.price * f.shares_out) + f.total_debt - f.cash) / f.ebitda
+    end as ev_ebitda,
+
+    case when f.revenue > 0
+        then ((p.price * f.shares_out) + f.total_debt - f.cash) / f.revenue
+    end as ev_sales,
+
+    case when (p.price * f.shares_out) > 0
+        then f.fcf / (p.price * f.shares_out)
+    end as fcf_yield,
+
+    case when (p.price * f.shares_out) > 0
+        then f.dividends / (p.price * f.shares_out)
+    end as div_yield,
+
+    /* Simple intrinsic value: normalize FCF yield at 6% */
+    case
+        when f.fcf > 0 and f.shares_out > 0
+            then (f.fcf / 0.06) / f.shares_out
+    end as iv_fcf_yield_6pct,
+
+    case
+        when f.fcf > 0 and f.shares_out > 0 and p.price > 0
+            then ((f.fcf / 0.06) / f.shares_out - p.price) / p.price
+    end as iv_fcf_yield_6pct_upside
+
+from prices p
+join f
+  on p.symbol = f.symbol
+order by iv_fcf_yield_6pct_upside desc nulls last
+  )
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "model.equity_valuation.equity_valuations"} */;
+[0m20:59:12.742108 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:59:13.323514 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.581 seconds
+[0m20:59:13.327050 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ca24477b-cf5e-4f9e-a890-3dd2318f9d88', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112954af0>]}
+[0m20:59:13.327855 [info ] [Thread-3 (]: 3 of 3 OK created sql view model ANALYTICS.equity_valuations ................... [[32mSUCCESS 1[0m in 0.60s]
+[0m20:59:13.328540 [debug] [Thread-3 (]: Finished running node model.equity_valuation.equity_valuations
+[0m20:59:13.330127 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:59:13.330445 [debug] [MainThread]: Connection 'model.equity_valuation.stg_fundamentals' was left open.
+[0m20:59:13.330702 [debug] [MainThread]: On model.equity_valuation.stg_fundamentals: Close
+[0m20:59:13.420059 [debug] [MainThread]: Connection 'model.equity_valuation.stg_prices' was left open.
+[0m20:59:13.420987 [debug] [MainThread]: On model.equity_valuation.stg_prices: Close
+[0m20:59:13.526971 [debug] [MainThread]: Connection 'model.equity_valuation.equity_valuations' was left open.
+[0m20:59:13.527848 [debug] [MainThread]: On model.equity_valuation.equity_valuations: Close
+[0m20:59:13.613999 [info ] [MainThread]: 
+[0m20:59:13.614929 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 1.87 seconds (1.87s).
+[0m20:59:13.616804 [debug] [MainThread]: Command end result
+[0m20:59:13.646690 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/manifest.json
+[0m20:59:13.648225 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/semantic_manifest.json
+[0m20:59:13.653572 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/run_results.json
+[0m20:59:13.653814 [info ] [MainThread]: 
+[0m20:59:13.654052 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:59:13.654235 [info ] [MainThread]: 
+[0m20:59:13.654439 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m20:59:13.657262 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.4881287, "process_in_blocks": "0", "process_kernel_time": 0.225075, "process_mem_max_rss": "150355968", "process_out_blocks": "0", "process_user_time": 1.363511}
+[0m20:59:13.657594 [debug] [MainThread]: Command `dbt run` succeeded at 20:59:13.657528 after 2.49 seconds
+[0m20:59:13.657838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111081050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11293fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fd2f20>]}
+[0m20:59:13.658066 [debug] [MainThread]: Flushing usage events
+[0m20:59:13.949999 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:59:14.853730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083bc1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109213c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109213b10>]}
+
+
+============================== 20:59:14.856550 | 1264f743-e1cc-460f-adfc-c831f71b3ad5 ==============================
+[0m20:59:14.856550 [info ] [MainThread]: Running with dbt=1.11.0-b4
+[0m20:59:14.856894 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'version_check': 'True', 'log_path': '/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/logs', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'printer_width': '80', 'partial_parse': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'debug': 'False', 'invocation_command': 'dbt test', 'introspect': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'empty': 'None', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/bayhodge/.dbt', 'warn_error': 'None', 'write_json': 'True'}
+[0m20:59:15.055966 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:59:15.056305 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:59:15.056468 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:59:15.141027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108554e90>]}
+[0m20:59:15.169439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109cd7f00>]}
+[0m20:59:15.169836 [info ] [MainThread]: Registered adapter: snowflake=1.10.3
+[0m20:59:15.224646 [debug] [MainThread]: checksum: 57e51233fb2305050a86c940b93938a4d3a51a7b95f45f76840a20ffa12695aa, vars: {}, profile: , target: , version: 1.11.0b4
+[0m20:59:15.281862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:59:15.282041 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:59:15.304209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d23950>]}
+[0m20:59:15.348306 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/manifest.json
+[0m20:59:15.349240 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/semantic_manifest.json
+[0m20:59:15.361536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a446030>]}
+[0m20:59:15.361748 [info ] [MainThread]: Found 3 models, 6 data tests, 2 sources, 494 macros
+[0m20:59:15.361909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a404130>]}
+[0m20:59:15.362818 [info ] [MainThread]: 
+[0m20:59:15.362981 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:59:15.363094 [info ] [MainThread]: 
+[0m20:59:15.363305 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:59:15.365349 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_EQUITY_DB_ANALYTICS'
+[0m20:59:15.394786 [debug] [ThreadPool]: Using snowflake connection "list_EQUITY_DB_ANALYTICS"
+[0m20:59:15.394949 [debug] [ThreadPool]: On list_EQUITY_DB_ANALYTICS: show objects in EQUITY_DB.ANALYTICS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "connection_name": "list_EQUITY_DB_ANALYTICS"} */;
+[0m20:59:15.395078 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:59:15.731498 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.336 seconds
+[0m20:59:15.737928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1264f743-e1cc-460f-adfc-c831f71b3ad5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6cdbf0>]}
+[0m20:59:15.741338 [debug] [Thread-4 (]: Began running node test.equity_valuation.not_null_stg_prices_date.e2075c925d
+[0m20:59:15.741925 [debug] [Thread-3 (]: Began running node test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f
+[0m20:59:15.742394 [debug] [Thread-1 (]: Began running node test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5
+[0m20:59:15.742774 [debug] [Thread-2 (]: Began running node test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7
+[0m20:59:15.743215 [info ] [Thread-4 (]: 4 of 6 START test not_null_stg_prices_date ..................................... [RUN]
+[0m20:59:15.743672 [info ] [Thread-3 (]: 3 of 6 START test not_null_stg_fundamentals_symbol ............................. [RUN]
+[0m20:59:15.744101 [info ] [Thread-1 (]: 1 of 6 START test not_null_equity_valuations_symbol ............................ [RUN]
+[0m20:59:15.744505 [info ] [Thread-2 (]: 2 of 6 START test not_null_stg_fundamentals_fiscal_year ........................ [RUN]
+[0m20:59:15.745028 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.equity_valuation.not_null_stg_prices_date.e2075c925d'
+[0m20:59:15.745452 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f'
+[0m20:59:15.745792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_EQUITY_DB_ANALYTICS, now test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5)
+[0m20:59:15.746186 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7'
+[0m20:59:15.746506 [debug] [Thread-4 (]: Began compiling node test.equity_valuation.not_null_stg_prices_date.e2075c925d
+[0m20:59:15.746809 [debug] [Thread-3 (]: Began compiling node test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f
+[0m20:59:15.747099 [debug] [Thread-1 (]: Began compiling node test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5
+[0m20:59:15.747385 [debug] [Thread-2 (]: Began compiling node test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7
+[0m20:59:15.767173 [debug] [Thread-4 (]: Writing injected SQL for node "test.equity_valuation.not_null_stg_prices_date.e2075c925d"
+[0m20:59:15.767405 [debug] [Thread-3 (]: Writing injected SQL for node "test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f"
+[0m20:59:15.770193 [debug] [Thread-1 (]: Writing injected SQL for node "test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5"
+[0m20:59:15.772640 [debug] [Thread-2 (]: Writing injected SQL for node "test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7"
+[0m20:59:15.774380 [debug] [Thread-3 (]: Began executing node test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f
+[0m20:59:15.774647 [debug] [Thread-1 (]: Began executing node test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5
+[0m20:59:15.774874 [debug] [Thread-4 (]: Began executing node test.equity_valuation.not_null_stg_prices_date.e2075c925d
+[0m20:59:15.791451 [debug] [Thread-1 (]: Writing runtime sql for node "test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5"
+[0m20:59:15.791666 [debug] [Thread-2 (]: Began executing node test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7
+[0m20:59:15.792083 [debug] [Thread-3 (]: Writing runtime sql for node "test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f"
+[0m20:59:15.793560 [debug] [Thread-4 (]: Writing runtime sql for node "test.equity_valuation.not_null_stg_prices_date.e2075c925d"
+[0m20:59:15.794830 [debug] [Thread-2 (]: Writing runtime sql for node "test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7"
+[0m20:59:15.795813 [debug] [Thread-3 (]: Using snowflake connection "test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f"
+[0m20:59:15.796029 [debug] [Thread-3 (]: On test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select symbol
+from EQUITY_DB.ANALYTICS.stg_fundamentals
+where symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f"} */
+[0m20:59:15.796375 [debug] [Thread-4 (]: Using snowflake connection "test.equity_valuation.not_null_stg_prices_date.e2075c925d"
+[0m20:59:15.796705 [debug] [Thread-2 (]: Using snowflake connection "test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7"
+[0m20:59:15.796874 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:59:15.797186 [debug] [Thread-1 (]: Using snowflake connection "test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5"
+[0m20:59:15.797356 [debug] [Thread-4 (]: On test.equity_valuation.not_null_stg_prices_date.e2075c925d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from EQUITY_DB.ANALYTICS.stg_prices
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.not_null_stg_prices_date.e2075c925d"} */
+[0m20:59:15.797537 [debug] [Thread-2 (]: On test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fiscal_year
+from EQUITY_DB.ANALYTICS.stg_fundamentals
+where fiscal_year is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7"} */
+[0m20:59:15.798003 [debug] [Thread-1 (]: On test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select symbol
+from EQUITY_DB.ANALYTICS.equity_valuations
+where symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5"} */
+[0m20:59:15.798233 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:59:15.798446 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:59:16.206017 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.407 seconds
+[0m20:59:16.218343 [info ] [Thread-2 (]: 2 of 6 PASS not_null_stg_fundamentals_fiscal_year .............................. [[32mPASS[0m in 0.47s]
+[0m20:59:16.218748 [debug] [Thread-2 (]: Finished running node test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7
+[0m20:59:16.218955 [debug] [Thread-2 (]: Began running node test.equity_valuation.not_null_stg_prices_symbol.21d05aad67
+[0m20:59:16.219159 [info ] [Thread-2 (]: 5 of 6 START test not_null_stg_prices_symbol ................................... [RUN]
+[0m20:59:16.219354 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.equity_valuation.not_null_stg_fundamentals_fiscal_year.34a993d4b7, now test.equity_valuation.not_null_stg_prices_symbol.21d05aad67)
+[0m20:59:16.219514 [debug] [Thread-2 (]: Began compiling node test.equity_valuation.not_null_stg_prices_symbol.21d05aad67
+[0m20:59:16.221565 [debug] [Thread-2 (]: Writing injected SQL for node "test.equity_valuation.not_null_stg_prices_symbol.21d05aad67"
+[0m20:59:16.222201 [debug] [Thread-2 (]: Began executing node test.equity_valuation.not_null_stg_prices_symbol.21d05aad67
+[0m20:59:16.223704 [debug] [Thread-2 (]: Writing runtime sql for node "test.equity_valuation.not_null_stg_prices_symbol.21d05aad67"
+[0m20:59:16.224398 [debug] [Thread-2 (]: Using snowflake connection "test.equity_valuation.not_null_stg_prices_symbol.21d05aad67"
+[0m20:59:16.224574 [debug] [Thread-2 (]: On test.equity_valuation.not_null_stg_prices_symbol.21d05aad67: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select symbol
+from EQUITY_DB.ANALYTICS.stg_prices
+where symbol is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.not_null_stg_prices_symbol.21d05aad67"} */
+[0m20:59:16.226139 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.428 seconds
+[0m20:59:16.227216 [info ] [Thread-4 (]: 4 of 6 PASS not_null_stg_prices_date ........................................... [[32mPASS[0m in 0.48s]
+[0m20:59:16.227492 [debug] [Thread-4 (]: Finished running node test.equity_valuation.not_null_stg_prices_date.e2075c925d
+[0m20:59:16.227665 [debug] [Thread-4 (]: Began running node test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35
+[0m20:59:16.227839 [info ] [Thread-4 (]: 6 of 6 START test unique_equity_valuations_symbol .............................. [RUN]
+[0m20:59:16.228013 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.equity_valuation.not_null_stg_prices_date.e2075c925d, now test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35)
+[0m20:59:16.228159 [debug] [Thread-4 (]: Began compiling node test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35
+[0m20:59:16.231157 [debug] [Thread-4 (]: Writing injected SQL for node "test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35"
+[0m20:59:16.231691 [debug] [Thread-4 (]: Began executing node test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35
+[0m20:59:16.233077 [debug] [Thread-4 (]: Writing runtime sql for node "test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35"
+[0m20:59:16.233851 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.435 seconds
+[0m20:59:16.235213 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.438 seconds
+[0m20:59:16.234817 [info ] [Thread-1 (]: 1 of 6 PASS not_null_equity_valuations_symbol .................................. [[32mPASS[0m in 0.49s]
+[0m20:59:16.235646 [debug] [Thread-4 (]: Using snowflake connection "test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35"
+[0m20:59:16.236515 [info ] [Thread-3 (]: 3 of 6 PASS not_null_stg_fundamentals_symbol ................................... [[32mPASS[0m in 0.49s]
+[0m20:59:16.236787 [debug] [Thread-1 (]: Finished running node test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5
+[0m20:59:16.236963 [debug] [Thread-4 (]: On test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    symbol as unique_field,
+    count(*) as n_records
+
+from EQUITY_DB.ANALYTICS.equity_valuations
+where symbol is not null
+group by symbol
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.11.0b4", "profile_name": "equity_valuation", "target_name": "dev", "node_id": "test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35"} */
+[0m20:59:16.237226 [debug] [Thread-3 (]: Finished running node test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f
+[0m20:59:16.400993 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.176 seconds
+[0m20:59:16.403904 [info ] [Thread-2 (]: 5 of 6 PASS not_null_stg_prices_symbol ......................................... [[32mPASS[0m in 0.18s]
+[0m20:59:16.404635 [debug] [Thread-2 (]: Finished running node test.equity_valuation.not_null_stg_prices_symbol.21d05aad67
+[0m20:59:16.620438 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.383 seconds
+[0m20:59:16.624786 [info ] [Thread-4 (]: 6 of 6 PASS unique_equity_valuations_symbol .................................... [[32mPASS[0m in 0.40s]
+[0m20:59:16.626126 [debug] [Thread-4 (]: Finished running node test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35
+[0m20:59:16.628698 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:59:16.629169 [debug] [MainThread]: Connection 'test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5' was left open.
+[0m20:59:16.629546 [debug] [MainThread]: On test.equity_valuation.not_null_equity_valuations_symbol.748cafd1a5: Close
+[0m20:59:16.711265 [debug] [MainThread]: Connection 'test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35' was left open.
+[0m20:59:16.712100 [debug] [MainThread]: On test.equity_valuation.unique_equity_valuations_symbol.e3df3a9a35: Close
+[0m20:59:16.802798 [debug] [MainThread]: Connection 'test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f' was left open.
+[0m20:59:16.803619 [debug] [MainThread]: On test.equity_valuation.not_null_stg_fundamentals_symbol.d3f89f639f: Close
+[0m20:59:16.890551 [debug] [MainThread]: Connection 'test.equity_valuation.not_null_stg_prices_symbol.21d05aad67' was left open.
+[0m20:59:16.891501 [debug] [MainThread]: On test.equity_valuation.not_null_stg_prices_symbol.21d05aad67: Close
+[0m20:59:17.010681 [info ] [MainThread]: 
+[0m20:59:17.011757 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 1.65 seconds (1.65s).
+[0m20:59:17.014129 [debug] [MainThread]: Command end result
+[0m20:59:17.040218 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/manifest.json
+[0m20:59:17.041829 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/semantic_manifest.json
+[0m20:59:17.047177 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/target/run_results.json
+[0m20:59:17.047392 [info ] [MainThread]: 
+[0m20:59:17.047623 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:59:17.047809 [info ] [MainThread]: 
+[0m20:59:17.048003 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m20:59:17.049846 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.2295268, "process_in_blocks": "0", "process_kernel_time": 0.200178, "process_mem_max_rss": "159219712", "process_out_blocks": "0", "process_user_time": 1.401582}
+[0m20:59:17.050151 [debug] [MainThread]: Command `dbt test` succeeded at 20:59:17.050097 after 2.23 seconds
+[0m20:59:17.050373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109037c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b56aa40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b569910>]}
+[0m20:59:17.050577 [debug] [MainThread]: Flushing usage events
+[0m20:59:17.170394 [debug] [MainThread]: An error was encountered while trying to flush usage events
