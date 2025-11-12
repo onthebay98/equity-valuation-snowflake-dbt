@@ -172,24 +172,27 @@ dbt creates:
 | `iv_fcf_yield_6pct`        | Intrinsic value per share (assuming 6% normalized FCF yield) |
 | `iv_fcf_yield_6pct_upside` | % upside vs current price                                    |
 
-Example:
+---
 
-| symbol | price | pe   | ev_ebitda | fcf_yield | iv_fcf_yield_6pct_upside |
-| ------ | ----- | ---- | --------- | --------- | ------------------------ |
-| AAPL   | 210   | 28.4 | 21.1      | 3.8%      | -17%                     |
-| MSFT   | 420   | 35.2 | 24.7      | 3.3%      | -24%                     |
-| META   | 390   | 21.0 | 13.9      | 6.5%      | +10%                     |
+### 🧮 Example Results — FY2024, Prices as of Jan 31 2025
+
+| SYMBOL    |  PRICE | FISCAL_YEAR | REVENUE ($B) | EBITDA ($B) | NET_INCOME ($B) | FCF ($B) |        PE | EV/EBITDA |  EV/SALES |  FCF Yield |  Div Yield | Intrinsic Value (6% FCF Yield) | Upside vs Price |
+| :-------- | -----: | ----------: | -----------: | ----------: | --------------: | -------: | --------: | --------: | --------: | ---------: | ---------: | -----------------------------: | --------------: |
+| **AAPL**  | 236.00 |        2024 |        391.0 |       125.0 |            93.7 |    108.8 | **38.1×** | **28.1×** |  **9.0×** | **3.05 %** | **0.43 %** |                         119.96 |           −49 % |
+| **MSFT**  | 415.06 |        2024 |        245.1 |       127.0 |            88.4 |    76.96 | **34.9×** | **24.1×** | **12.5×** | **2.49 %** | **0.68 %** |                         172.57 |           −58 % |
+| **GOOGL** | 204.02 |        2024 |        350.0 |       130.0 |           100.1 |    72.76 | **25.1×** | **19.1×** |  **7.1×** | **2.90 %** | **0.29 %** |                          98.60 |           −52 % |
+| **META**  | 689.18 |        2024 |        164.5 |        75.0 |            62.4 |     52.1 | **28.0×** | **22.6×** | **10.3×** | **2.98 %** | **0.29 %** |                         342.67 |           −50 % |
 
 ---
 
-## 🧠 How to Interpret It
+### 🧭 Interpretation
 
-Analysts would use this table to:
+Even with strong earnings, all four megacaps screen as **overvalued** under a conservative 6 % FCF-yield framework — implying roughly 50 % downside to “fair” value if investors demanded higher cash yields.
+An analyst would read this as:
 
-* **Screen** for cheap or expensive names.
-* **Compare** valuation multiples across peers.
-* **Estimate** fair value via normalized FCF yield.
-* **Rank** by upside/downside for further research.
+* **High multiples (P/E 30–40×, EV/EBITDA 20–25×):** justified only if growth and margins stay exceptional.
+* **Low FCF yields (< 3 %):** the market prices these firms like long-duration growth assets, not cash cows.
+* **Intrinsic value vs price:** all trade well above the fair-value curve; this aligns with 2025’s high-multiple tech environment.
 
 ---
 
