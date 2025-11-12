@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    database: EQUITY_DB
+    schema: RAW
+    tables:
+      - name: PRICES
+      - name: FUNDAMENTALS
+
+models:
+  - name: stg_prices
+    columns:
+      - name: symbol
+        tests: [not_null]
+      - name: date
+        tests: [not_null]
+  - name: stg_fundamentals
+    columns:
+      - name: symbol
+        tests: [not_null]
+      - name: fiscal_year
+        tests: [not_null]
+  - name: equity_valuations
+    description: "Valuation metrics & simple intrinsic value estimates for demo universe."
+    columns:
+      - name: symbol
+        tests: [not_null, unique]

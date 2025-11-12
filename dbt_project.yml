@@ -1,0 +1,11 @@
+name: "equity_valuation"
+version: "1.0.0"
+config-version: 2
+
+profile: "equity_valuation"
+
+model-paths: ["models"]
+
+models:
+  equity_valuation:
+    +materialized: view
