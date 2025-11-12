@@ -188,7 +188,8 @@ dbt creates:
 ### 🧭 Interpretation
 
 Even with strong earnings, all four megacaps screen as **overvalued** under a conservative 6 % FCF-yield framework — implying roughly 50 % downside to “fair” value if investors demanded higher cash yields.
-An analyst would read this as:
+
+Notes:
 
 * **High multiples (P/E 30–40×, EV/EBITDA 20–25×):** justified only if growth and margins stay exceptional.
 * **Low FCF yields (< 3 %):** the market prices these firms like long-duration growth assets, not cash cows.
@@ -197,4 +198,5 @@ An analyst would read this as:
 ---
 
 **Author:** Bay Hodge
+
 **Environment:** Python 3.13, dbt 1.11, Snowflake X-Small WH
