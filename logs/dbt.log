@@ -1256,3 +1256,44 @@ having count(*) > 1
 [0m20:11:16.949363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e8fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077478b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079b8310>]}
 [0m20:11:16.950476 [debug] [MainThread]: Flushing usage events
 [0m20:11:17.064300 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:13:15.663319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083cc1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092239d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109223b10>]}
+
+
+============================== 20:13:15.669207 | 86f737d1-0f0f-4cf9-9016-0d167dc55642 ==============================
+[0m20:13:15.669207 [info ] [MainThread]: Running with dbt=1.11.0-b4
+[0m20:13:15.669521 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'debug': 'False', 'partial_parse': 'True', 'log_format': 'default', 'static_parser': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'version_check': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/logs', 'cache_selected_only': 'False', 'profiles_dir': '/Users/bayhodge/.dbt', 'write_json': 'True', 'invocation_command': 'dbt docs serve', 'warn_error': 'None', 'quiet': 'False', 'printer_width': '80'}
+[0m20:13:15.975460 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m20:13:15.975723 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m20:13:15.975867 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m20:13:16.065967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86f737d1-0f0f-4cf9-9016-0d167dc55642', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108570e90>]}
+[0m20:13:16.096223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86f737d1-0f0f-4cf9-9016-0d167dc55642', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ce7f00>]}
+[0m20:15:13.798476 [error] [MainThread]: Encountered an error:
+
+[0m20:15:13.822747 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 272, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 303, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 350, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/cli/main.py", line 307, in docs_serve
+    results = task.run()
+  File "/Users/bayhodge/Desktop/code/equity-valuation-snowflake-dbt/venv/lib/python3.13/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m20:15:13.838227 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 118.22179, "process_in_blocks": "0", "process_kernel_time": 0.20477, "process_mem_max_rss": "129564672", "process_out_blocks": "0", "process_user_time": 0.899138}
+[0m20:15:13.842287 [debug] [MainThread]: Command `dbt docs serve` failed at 20:15:13.841974 after 118.23 seconds
+[0m20:15:13.844220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a10df50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a10e150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a125310>]}
+[0m20:15:13.845086 [debug] [MainThread]: Flushing usage events
+[0m20:15:14.011833 [debug] [MainThread]: An error was encountered while trying to flush usage events
